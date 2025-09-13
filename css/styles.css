@@ -1717,6 +1717,57 @@ body {
     background: var(--bg-light);
 }
 
+/* About Page - New Sections */
+.our-approach {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.approach-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.approach-step {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.approach-step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.why-choose {
+    padding: 60px 0;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reason-card {
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.reason-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.reason-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Responsive adjustments for new pages */
 @media (max-width: 768px) {
     .contact-grid {
@@ -1735,6 +1786,14 @@ body {
     }
 
     .cert-content {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-content {
+        grid-template-columns: 1fr;
+    }
+
+    .reasons-grid {
         grid-template-columns: 1fr;
     }
 }
