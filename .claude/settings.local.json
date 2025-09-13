@@ -5,7 +5,17 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Read(//d//**)",
+      "Bash(for file in services.html cookie-policy.html payment-policy.html privacy-policy.html terms-of-use.html)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(for file in cookie-policy.html payment-policy.html privacy-policy.html terms-of-use.html)",
+      "Bash(do)",
+      "Bash(sed:*)",
+      "Bash(for file in *.html)",
+      "Bash(do sed -i 's/images\\/logo\\.svg/images\\/logo.png/g' \"$file\")"
     ],
     "deny": [],
     "ask": []

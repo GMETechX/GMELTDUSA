@@ -63,9 +63,10 @@ body {
 }
 
 .logo-image {
-    height: 50px;
+    height: 120px;
     width: auto;
     display: block;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -118,7 +119,7 @@ body {
 
 /* Hero Section */
 .hero {
-    margin-top: 70px;
+    margin-top: 150px;
     padding: 80px 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background: linear-gradient(to bottom right, var(--bg-white), #eff6ff);
@@ -533,7 +534,7 @@ body {
 .page-header {
     background: linear-gradient(to bottom right, var(--bg-white), #eff6ff);
     padding: 120px 0 60px;
-    margin-top: 70px;
+    margin-top: 150px;
     text-align: center;
 }
 
@@ -1730,16 +1731,109 @@ body {
     margin-top: 2rem;
 }
 
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
 .approach-step {
     background: var(--bg-white);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
 }
 
 .approach-step h3 {
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.approach-step p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.custom-quote-section {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.custom-quote-section h3 {
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.custom-quote-section p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.industries-served {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.industries-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.industry-item {
+    background: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.industry-item h4 {
+    color: var(--text-dark);
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.industry-item p {
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 .why-choose {
