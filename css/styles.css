@@ -1438,9 +1438,111 @@ body {
     }
 }
 
+/* Portfolio Page Styles */
+.portfolio-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.portfolio-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    padding: 1.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-header h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.portfolio-tag {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-content {
+    padding: 2.5rem;
+}
+
+.portfolio-section {
+    margin-bottom: 2rem;
+}
+
+.portfolio-section h4 {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-section p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.portfolio-results {
+    background: var(--bg-light);
+    padding: 1.75rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.portfolio-results h4 {
+    color: var(--text-dark);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.portfolio-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-results li {
+    color: var(--text-dark);
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.portfolio-results li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
 /* Case Studies Page Styles */
 .case-studies {
     padding: 80px 0;
+    background: var(--bg-white);
 }
 
 .case-study-card {
@@ -1449,6 +1551,14 @@ body {
     box-shadow: var(--shadow-md);
     padding: 2rem;
     margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
 }
 
 .case-study-header {
@@ -1457,12 +1567,14 @@ body {
     align-items: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .case-study-header h2 {
     color: var(--text-dark);
     font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .industry-tag {
@@ -1479,17 +1591,26 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.case-study-content h3:first-child {
+    margin-top: 0;
 }
 
 .case-study-content p {
     color: var(--text-light);
     margin-bottom: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .case-study-content ul {
     list-style: none;
     padding-left: 0;
+    margin-top: 1rem;
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 .case-study-content li {
@@ -1497,6 +1618,7 @@ body {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
+    line-height: 1.6;
 }
 
 .case-study-content li::before {
@@ -1505,6 +1627,7 @@ body {
     left: 0;
     color: var(--secondary-color);
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* FAQ Page Styles */
@@ -1871,6 +1994,26 @@ body {
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .portfolio-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-content {
+        padding: 1.5rem;
+    }
+
+    .portfolio-section h4,
+    .portfolio-results h4 {
+        font-size: 1rem;
     }
 
     .case-study-header {
